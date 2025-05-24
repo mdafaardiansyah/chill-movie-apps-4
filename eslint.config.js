@@ -15,6 +15,7 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
+        process: 'readonly', // Define process for files like getApiUrl.js
       },
       parserOptions: {
         ecmaVersion: 'latest',
@@ -39,13 +40,14 @@ export default [
   },
   // Konfigurasi khusus untuk file test
   {
-    files: ['src/__tests__/**/*.{js,jsx}', '**/*.test.{js,jsx}', '**/*.spec.{js,jsx}'],
+    files: ['src/__tests__/**/*.{js,jsx}', '**/*.test.{js,jsx}', '**/*.spec.{js,jsx}', 'src/setupTests.js'], // Added setupTests.js
     plugins: {
       jest: eslintPluginJest,
     },
     languageOptions: {
       globals: {
         ...globals.jest,
+        global: 'readonly', // Define global for setupTests.js and other tests if needed
         // Jika ada global lain yang spesifik untuk Jest dan tidak tercakup, tambahkan di sini
         // Misalnya: global: true (jika Anda benar-benar menggunakan 'global' secara eksplisit di test)
       },

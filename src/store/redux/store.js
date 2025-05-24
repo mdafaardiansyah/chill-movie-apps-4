@@ -15,7 +15,7 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false, // Untuk menangani nilai non-serializable
     }),
-  devTools: process.env.NODE_ENV !== 'production', // Aktifkan Redux DevTools di development
+  devTools: import.meta.env.MODE !== 'production', // Aktifkan Redux DevTools di development
 });
 
 export default store;

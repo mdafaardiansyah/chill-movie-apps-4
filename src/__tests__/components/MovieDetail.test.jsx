@@ -29,9 +29,9 @@ const mockWatchlistService = {
 };
 
 // Assign mocks to global scope for test access
-global.movieService = mockMovieService;
-global.favoriteService = mockFavoriteService;
-global.watchlistService = mockWatchlistService;
+window.movieService = mockMovieService;
+window.favoriteService = mockFavoriteService;
+window.watchlistService = mockWatchlistService;
 
 jest.mock('../../contexts/AuthContext', () => ({
   useAuth: jest.fn()

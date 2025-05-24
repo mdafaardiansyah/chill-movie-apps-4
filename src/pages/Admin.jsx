@@ -9,6 +9,7 @@ const Admin = () => {
   const navigate = useNavigate();
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -27,8 +28,7 @@ const Admin = () => {
   const {
     items: movies,
     loading,
-    error,
-    fetchItems: fetchMovies,
+    error: crudError,
     addItem: addMovie,
     updateItem: updateMovie,
     deleteItem: deleteMovie

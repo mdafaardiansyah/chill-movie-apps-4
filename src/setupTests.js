@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 
 // Polyfill untuk TextEncoder dan TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+window.TextEncoder = TextEncoder;
+window.TextDecoder = TextDecoder;
 
 // Setup global mocks
-global.fetch = jest.fn();
+window.fetch = jest.fn();
 
 // Mock untuk localStorage
 const localStorageMock = {
@@ -17,8 +17,8 @@ const localStorageMock = {
   clear: jest.fn(),
 };
 
-global.localStorage = localStorageMock;
+window.localStorage = localStorageMock;
 
 // Mematikan console.error dan console.warn selama testing
-global.console.error = jest.fn();
-global.console.warn = jest.fn();
+window.console.error = jest.fn();
+window.console.warn = jest.fn();
