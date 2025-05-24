@@ -1,8 +1,6 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import apiClient from '../services/api/index';
-
-// Membuat context untuk autentikasi
-export const AuthContext = createContext();
+import { AuthContext } from './AuthContext';
 
 // Provider component untuk AuthContext
 export const AuthProvider = ({ children }) => {

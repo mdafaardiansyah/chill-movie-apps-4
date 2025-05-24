@@ -1,4 +1,4 @@
-import movieService, {
+import {
   getAllMovies,
   getMovieById,
   getTrendingMovies,

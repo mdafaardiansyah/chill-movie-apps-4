@@ -164,7 +164,7 @@ const Admin = () => {
     <div className="admin-container">
       <h1 className="admin-title">Admin Panel - Kelola Film</h1>
       
-      {error && <div className="error-message">{error}</div>}
+      {(error || crudError) && <div className="error-message">{error || crudError}</div>}
       
       <div className="admin-actions">
         <button 
