@@ -57,7 +57,7 @@ Chill Movie Apps adalah aplikasi streaming film berbasis web yang memungkinkan p
 - **Linting**: ESLint 9.21
 - **Testing**: Jest, React Testing Library
 - **API Integration**: Axios
-- **Styling**: CSS Modules, Tailwind CSS
+- **Styling**: CSS Modules
 
 ### State Management
 - **Redux Toolkit**: State management terpusat
@@ -159,4 +159,4 @@ Aplikasi dapat diakses di:
 
 ## Lisensi
 
-Distribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
+Dibuat dengan ❤️ dari Dapuk
